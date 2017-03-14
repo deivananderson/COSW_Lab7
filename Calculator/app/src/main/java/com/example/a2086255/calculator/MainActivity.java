@@ -38,6 +38,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.button_point).setOnClickListener(this);
         findViewById(R.id.button_ac).setOnClickListener(this);
         findViewById(R.id.button_inver).setOnClickListener(this);
+        findViewById(R.id.button_sin).setOnClickListener(this);
+        findViewById(R.id.button_cos).setOnClickListener(this);
+        findViewById(R.id.button_tan).setOnClickListener(this);
         textView = (TextView)findViewById(R.id.result);
         pila = new Stack();
         resultado = 0;
@@ -156,6 +159,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 v1 = (double)pila.pop();
                 pila.push(-v1);
                 textView.setText(""+(-v1));
+                break;
+            case R.id.button_sin:
+                v1 = (double)pila.pop();
+                v2 = Math.sin(v1);
+                pila.push(v2);
+                textView.setText(""+v2);
+                break;
+            case R.id.button_cos:
+                v1 = (double)pila.pop();
+                v2 = Math.cos(v1);
+                pila.push(v2);
+                textView.setText(""+v2);
+                break;
+            case R.id.button_tan:
+                v1 = (double)pila.pop();
+                v2 = Math.tan(v1);
+                pila.push(v2);
+                textView.setText(""+v2);
                 break;
         }
     }
