@@ -41,6 +41,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.button_sin).setOnClickListener(this);
         findViewById(R.id.button_cos).setOnClickListener(this);
         findViewById(R.id.button_tan).setOnClickListener(this);
+        findViewById(R.id.button_sqrt).setOnClickListener(this);
+        findViewById(R.id.button_power).setOnClickListener(this);
+        findViewById(R.id.button_divX).setOnClickListener(this);
         textView = (TextView)findViewById(R.id.result);
         pila = new Stack();
         resultado = 0;
@@ -175,6 +178,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.button_tan:
                 v1 = (double)pila.pop();
                 v2 = Math.tan(v1);
+                pila.push(v2);
+                textView.setText(""+v2);
+                break;
+            case R.id.button_sqrt:
+                v1 = (double)pila.pop();
+                v2 = Math.sqrt(v1);
+                pila.push(v2);
+                textView.setText(""+v2);
+                break;
+            case R.id.button_power:
+                v1 = (double)pila.pop();
+                v2 = Math.pow(v1,2);
+                pila.push(v2);
+                textView.setText(""+v2);
+                break;
+            case R.id.button_divX:
+                v1 = (double)pila.pop();
+                v2 = 1/v1;
                 pila.push(v2);
                 textView.setText(""+v2);
                 break;

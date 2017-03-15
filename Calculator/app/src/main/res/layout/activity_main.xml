@@ -219,24 +219,25 @@
             android:layout_height="50dp">
 
             <Button
-                android:text="Button"
+                android:text="1/x"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/button17" />
-
-            <Button
-                android:text="Button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/button18"
+                android:id="@+id/button_divX"
                 android:layout_weight="1" />
 
             <Button
-                android:text="Button"
+                android:text="SQRT"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/button19"
+                android:id="@+id/button_sqrt"
                 android:layout_weight="1" />
+
+            <Button
+                android:text="x^2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_power"
+                android:layout_weight="1"/>
         </LinearLayout>
 
     </LinearLayout>
